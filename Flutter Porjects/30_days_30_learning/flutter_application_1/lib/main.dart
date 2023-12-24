@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
+import 'package:flutter_application_1/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -23,13 +24,13 @@ class MyApp extends StatelessWidget {
       ),
 
       // home: HomePage(),
-      // initialRoute: "/login",
+      initialRoute: "/login",
       // routes are the ways which defines which screeen is to be opened.
       // in this case, we are opening the home page when the app is opened.
       routes: {
         "/": (context) => LoginPage(),
-        // "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
       },
     );
   }
