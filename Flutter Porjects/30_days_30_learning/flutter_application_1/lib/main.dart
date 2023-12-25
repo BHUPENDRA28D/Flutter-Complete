@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
       ),
 
       // home: HomePage(),
-      initialRoute: "/login",
+      debugShowCheckedModeBanner: false,
+      initialRoute: MyRoutes.homeRoute,
       // routes are the ways which defines which screeen is to be opened.
       // in this case, we are opening the home page when the app is opened.
       routes: {
