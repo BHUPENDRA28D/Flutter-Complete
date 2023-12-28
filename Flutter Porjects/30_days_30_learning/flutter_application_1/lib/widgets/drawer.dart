@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
