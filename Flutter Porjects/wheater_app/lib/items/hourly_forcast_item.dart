@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:wheater_app/styles.dart';
+import 'package:wheater_app/items/styles.dart';
 
 class HourlyForcastItem extends StatelessWidget {
-  const HourlyForcastItem({super.key});
+  final String time;
+  final String temp;
+  final IconData iconHP;
+
+  const HourlyForcastItem(
+      {super.key,
+      required this.time,
+      required this.temp,
+      required this.iconHP});
 
   @override
   Widget build(BuildContext context) {
@@ -11,22 +19,22 @@ class HourlyForcastItem extends StatelessWidget {
       child: Container(
         width: 100,
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
-        child: const Padding(
-          padding: EdgeInsets.all(8.0),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               Text(
-                "9.00 am",
+                time,
                 style: wfcTime,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
-              Icon(Icons.cloud, size: 40),
-              SizedBox(
+              Icon(iconHP),
+              const SizedBox(
                 height: 8,
               ),
-              Text("356.12"),
+              Text(temp),
             ],
           ),
         ),
