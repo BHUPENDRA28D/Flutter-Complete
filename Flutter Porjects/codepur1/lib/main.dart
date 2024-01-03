@@ -1,4 +1,5 @@
-import 'package:codepur1/Pages/Screens/home_page.dart';
+import 'package:codepur1/Pages/Screens/splash_page.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -6,10 +7,12 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  int days = 30;
-  var name = "Codepur";
   @override
   Widget build(BuildContext context) {
-    return HomePage();
+    return MaterialApp(
+      title: "Meme App",
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
+    );
   }
 }
