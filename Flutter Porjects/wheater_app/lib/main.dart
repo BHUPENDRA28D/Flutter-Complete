@@ -13,9 +13,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(useMaterial3: true).copyWith(
-        appBarTheme: const AppBarTheme(),
+      theme: ThemeData(
+        brightness: Brightness.light,
+        useMaterial3: true,
+        /* light theme settings */
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        useMaterial3: true,
+        /* dark theme settings */
+      ),
+      themeMode: ThemeMode.system,
       home: const WeatherScreen(),
     );
   }

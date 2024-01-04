@@ -26,6 +26,8 @@ class HourlyForcastItem extends StatelessWidget {
               Text(
                 time,
                 style: wfcTime,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(
                 height: 8,
