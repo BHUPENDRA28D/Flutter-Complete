@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shoes/global_variables.dart';
+import 'package:shoes/product_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,9 +23,9 @@ class _HomePageState extends State<HomePage> {
     'All',
     'Adidas',
     'Nike',
-    'Bata',
+    'RedCheif',
     'Puma',
-    'RedCheif'
+    'Bata'
   ];
 
   late String selectedFilter;
@@ -91,6 +93,23 @@ class _HomePageState extends State<HomePage> {
                 );
               }),
         ),
+        // Product List
+        Expanded(
+          child: ListView.builder(
+            itemCount: products.length,
+            itemBuilder: (context, index) {
+              final product = products[index];
+              return ProductCard(
+                title: product['title'] as String,
+                price: product['price'] as double,
+                image: product['imageUrl'] as String,
+                backgroundColor: (index.isEven)
+                    ? Color.fromRGBO(216, 240, 253, 1)
+                    : Color.fromRGBO(245, 247, 249, 1),
+              );
+            },
+          ),
+        )
       ]),
     ));
   }

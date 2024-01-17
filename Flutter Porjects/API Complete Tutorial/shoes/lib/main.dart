@@ -19,9 +19,15 @@ class MyApp extends StatelessWidget {
               primary: Color.fromRGBO(254, 206, 1, 1)),
           inputDecorationTheme: const InputDecorationTheme(
               hintStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              prefixIconColor: Color.fromRGBO(119, 119, 119, 1))
+              prefixIconColor: Color.fromRGBO(119, 119, 119, 1)),
           // fontFamily: GoogleFonts.exo,
-          ),
+          textTheme: const TextTheme(
+            titleMedium: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
+            ),
+            bodySmall: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          )),
       home: const HomePage(),
     );
   }
