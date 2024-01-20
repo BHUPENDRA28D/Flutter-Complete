@@ -1,7 +1,9 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shoes/pages/home_page.dart';
 import 'package:shoes/providers/cart_provider.dart';
+import 'package:shoes/splash.dart';
 
 void main() {
   runApp(MyApp());
@@ -48,7 +50,7 @@ class MyApp extends StatelessWidget {
           ),
           useMaterial3: true,
         ),
-        home: HomePage(),
+        home: AnimatedSplashScreen(splash: Splash(), nextScreen: HomePage()),
         // home: ProductDetailPage(product: products[0]));
       ),
     );
