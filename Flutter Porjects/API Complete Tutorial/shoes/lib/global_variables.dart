@@ -41,13 +41,13 @@ final products = [
   },
 ];
 
-final cart = [
-  {
-    'id': '3',
-    'Company': 'RedChief',
-    'title': 'Men\'s RedChief Shoes',
-    'price': 3498.99,
-    'sizes': [7, 8, 9, 10, 11],
-    'imageUrl': 'assets/images/shoes5.png',
-  },
-];
+// final cart = [
+//   {
+//     'id': '3',
+//     'Company': 'RedChief',
+//     'title': 'Men\'s RedChief Shoes',
+//     'price': 3498.99,
+//     'sizes': 8,
+//     'imageUrl': 'assets/images/shoes5.png',
+//   },
+// ];
